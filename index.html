@@ -205,19 +205,30 @@
 <footer>
   <p>Projeto Acadêmico em Desenvolvimento</p>
 
-  <div class="contador">
-    <p>👁️ Visitantes do site:</p>
+  <div class="contador-card">
 
-    <div id="contador-site"></div>
+  <h3>👁️ Visitas no site</h3>
 
-    <a href="http://www.freevisitorcounters.com" target="_blank" class="link-contador">
-      contador
-    </a>
+  <div class="contador-numero" id="contador">0</div>
 
-    <script src="https://www.freevisitorcounters.com/auth.php?id=f133caaf89ff7132adf2d71b9a972514ff8563e9"></script>
-    <script src="https://www.freevisitorcounters.com/en/home/counter/1546504/t/11"></script>
+</div>
   </div>
+
 </footer>
+
+<script>
+let visitas = localStorage.getItem("visitasSite");
+
+if(!visitas){
+    visitas = 1;
+} else {
+    visitas = parseInt(visitas) + 1;
+}
+
+localStorage.setItem("visitasSite", visitas);
+
+document.getElementById("contador").innerText = visitas;
+</script>
 
 </body>
 </html>
