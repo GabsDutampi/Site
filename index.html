@@ -9,8 +9,13 @@
 <body>
 
 <header class="navbar">
+
   <h2>Consciência Ambiental</h2>
-  <nav>
+
+  <!-- BOTÃO MOBILE -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <nav id="menu">
     <a href="#correlacao">Correlação</a>
     <a href="#impactos">Impactos</a>
     <a href="#importancia">Importância</a>
@@ -18,6 +23,7 @@
     <a href="#comportamento">Comportamento</a>
     <a href="#intervencao">Intervenção</a>
   </nav>
+
 </header>
 
 <!-- HERO -->
@@ -240,6 +246,14 @@ onValue(visitasRef, (snapshot) => {
 
 </script>
 
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
