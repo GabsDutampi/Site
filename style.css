@@ -1,5 +1,4 @@
 /* RESET */
-
 *{
     margin: 0;
     padding: 0;
@@ -7,19 +6,19 @@
 }
 
 /* BODY */
-
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: #07142a;
     color: white;
     line-height: 1.7;
+
+    /* melhora com navbar fixa */
+    padding-top: 110px;
 }
 
 /* NAVBAR */
-
 .navbar{
     position: fixed;
-
     top: 0;
     left: 0;
 
@@ -32,7 +31,6 @@ body{
     padding: 20px 60px;
 
     background: rgba(5,10,30,0.75);
-
     backdrop-filter: blur(10px);
 
     z-index: 999;
@@ -40,57 +38,38 @@ body{
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* TÍTULO */
-
 .navbar h2{
     color: white;
-
     font-size: 42px;
     font-weight: 800;
-
     letter-spacing: 1px;
-
     text-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
-
-/* MENU */
 
 .navbar nav{
     display: flex;
     gap: 15px;
 }
 
-/* LINKS */
-
 .navbar nav a{
     color: white;
-
     text-decoration: none;
-
     font-size: 17px;
     font-weight: 600;
 
     padding: 10px 18px;
-
     border-radius: 12px;
 
     transition: 0.3s ease;
 }
 
-/* HOVER */
-
 .navbar nav a:hover{
     background: rgba(255,255,255,0.12);
-
     transform: translateY(-2px);
-
     box-shadow: 0 0 15px rgba(255,255,255,0.1);
 }
 
 /* HERO */
-
-/* HERO */
-
 .hero{
     height: 100vh;
 
@@ -118,21 +97,15 @@ body{
 .hero-content h1{
     font-size: 75px;
     margin-bottom: 20px;
-
-    color: white;
-
     text-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
 .hero-content p{
     font-size: 24px;
     color: #e5e5e5;
-
-    line-height: 1.6;
 }
 
 /* SEÇÕES */
-
 .section{
     padding: 100px 10%;
 }
@@ -149,13 +122,11 @@ body{
 }
 
 /* FUNDO ALTERNATIVO */
-
 .alt{
     background: #0d1d38;
 }
 
 /* SPLIT */
-
 .split{
     display: flex;
     align-items: center;
@@ -165,12 +136,10 @@ body{
 .split img{
     width: 45%;
     border-radius: 20px;
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* CARDS */
-
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
@@ -180,13 +149,9 @@ body{
 
 .card{
     background: #132746;
-
     border-radius: 20px;
-
     overflow: hidden;
-
     transition: 0.3s;
-
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
@@ -211,7 +176,6 @@ body{
 }
 
 /* DESTAQUE */
-
 .destaque{
     background: linear-gradient(135deg,#163c24,#0c6a3d);
 }
@@ -226,26 +190,20 @@ body{
 }
 
 /* GALERIA */
-
 .galeria{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
     gap: 25px;
-
     margin-top: 50px;
 }
-
-/* IMAGENS E VÍDEOS */
 
 .galeria img,
 .galeria video{
     width: 100%;
     height: 320px;
-
     object-fit: cover;
 
     border-radius: 18px;
-
     border: 2px solid rgba(255,255,255,0.08);
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
@@ -253,26 +211,15 @@ body{
     transition: 0.3s;
 }
 
-/* HOVER */
-
 .galeria img:hover,
 .galeria video:hover{
     transform: scale(1.02) translateY(-5px);
 }
 
-/* VÍDEO */
-
-.galeria video{
-    background: black;
-}
-
 /* FOOTER */
-
 footer{
     background: #050b16;
-
     padding: 40px 20px;
-
     text-align: center;
 }
 
@@ -281,44 +228,54 @@ footer p{
     font-size: 18px;
 }
 
-.contador-card{
-    margin: auto;
+/* =========================
+   🔥 CONTADOR DASHBOARD PRO
+========================= */
 
-    width: fit-content;
+.dashboard-counter{
+    display: flex;
+    align-items: center;
+    gap: 18px;
 
-    padding: 30px 50px;
-
-    border-radius: 20px;
+    padding: 28px 50px;
+    border-radius: 22px;
 
     background: linear-gradient(145deg, #0b1224, #111c3a);
 
     border: 1px solid rgba(255,255,255,0.08);
 
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 
-    text-align: center;
+    width: fit-content;
+    margin: auto;
+
+    transition: 0.3s ease;
 }
 
-.contador-card h3{
-    color: white;
-
-    font-size: 20px;
-
-    margin-bottom: 15px;
+.dashboard-counter:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(0,229,255,0.15);
 }
 
-.contador-numero{
-    font-size: 40px;
+.dashboard-counter .icon{
+    font-size: 45px;
+}
 
-    font-weight: bold;
+.dashboard-counter h3{
+    font-size: 13px;
+    color: #9aa4b2;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
 
+#contador{
+    font-size: 52px;
+    font-weight: 900;
     color: #00e5ff;
-
-    text-shadow: 0 0 10px rgba(0,229,255,0.4);
+    text-shadow: 0 0 12px rgba(0,229,255,0.5);
 }
 
-/* RESPONSIVO */
-
+/* RESPONSIVO GERAL */
 @media(max-width: 900px){
 
     .navbar{
@@ -327,9 +284,8 @@ footer p{
         gap: 20px;
     }
 
-    .navbar nav{
-        flex-wrap: wrap;
-        justify-content: center;
+    body{
+        padding-top: 160px;
     }
 
     .hero-content h1{
@@ -360,53 +316,36 @@ footer p{
         font-size: 18px;
     }
 
-    .galeria{
-        grid-template-columns: 1fr;
-    }
-
-    .galeria img,
-    .galeria video{
-        height: auto;
-    }
-
-    /* CELULAR */
-
-@media (max-width: 768px){
-
-    .navbar{
+    .dashboard-counter{
         flex-direction: column;
-
-        padding: 20px;
+        text-align: center;
+        padding: 22px 28px;
     }
+
+    #contador{
+        font-size: 40px;
+    }
+}
+
+/* MENU MOBILE EXTRA */
+@media (max-width: 768px){
 
     .navbar h2{
         font-size: 34px;
-
         margin-bottom: 15px;
-
         text-align: center;
     }
 
     .navbar nav{
-        display: flex;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 10px;
     }
 
     .navbar nav a{
         font-size: 16px;
-
         padding: 10px 14px;
-
         background: rgba(255,255,255,0.06);
-
         border-radius: 10px;
     }
-
-}
-
 }
