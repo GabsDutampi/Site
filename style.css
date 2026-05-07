@@ -11,17 +11,14 @@ body{
     background: #07142a;
     color: white;
     line-height: 1.7;
-
-    /* melhora com navbar fixa */
     padding-top: 110px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
 
     display: flex;
@@ -29,20 +26,16 @@ body{
     align-items: center;
 
     padding: 20px 60px;
-
     background: rgba(5,10,30,0.75);
     backdrop-filter: blur(10px);
 
     z-index: 999;
-
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .navbar h2{
-    color: white;
     font-size: 42px;
     font-weight: 800;
-    letter-spacing: 1px;
     text-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
@@ -59,45 +52,41 @@ body{
 
     padding: 10px 18px;
     border-radius: 12px;
-
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .navbar nav a:hover{
     background: rgba(255,255,255,0.12);
     transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(255,255,255,0.1);
 }
 
-/* HERO */
+/* BOTÃO HAMBURGUER */
+.menu-toggle{
+    display: none;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
 .hero{
     height: 100vh;
-
-    background-image:
-    linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
     url("images/banner.jpg");
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     text-align: center;
-
     padding: 20px;
-}
-
-.hero-content{
-    max-width: 900px;
 }
 
 .hero-content h1{
     font-size: 75px;
     margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
 .hero-content p{
@@ -105,7 +94,7 @@ body{
     color: #e5e5e5;
 }
 
-/* SEÇÕES */
+/* ================= SEÇÕES ================= */
 .section{
     padding: 100px 10%;
 }
@@ -136,7 +125,6 @@ body{
 .split img{
     width: 45%;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* CARDS */
@@ -144,7 +132,6 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
     gap: 30px;
-    margin-top: 40px;
 }
 
 .card{
@@ -152,7 +139,6 @@ body{
     border-radius: 20px;
     overflow: hidden;
     transition: 0.3s;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .card:hover{
@@ -172,7 +158,6 @@ body{
 
 .card p{
     margin: 0 20px 25px;
-    font-size: 17px;
 }
 
 /* DESTAQUE */
@@ -181,7 +166,7 @@ body{
 }
 
 .destaque ul{
-    margin: 25px 0 25px 20px;
+    margin-left: 20px;
 }
 
 .destaque li{
@@ -194,7 +179,6 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
     gap: 25px;
-    margin-top: 50px;
 }
 
 .galeria img,
@@ -202,36 +186,17 @@ body{
     width: 100%;
     height: 320px;
     object-fit: cover;
-
     border-radius: 18px;
-    border: 2px solid rgba(255,255,255,0.08);
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-
-    transition: 0.3s;
-}
-
-.galeria img:hover,
-.galeria video:hover{
-    transform: scale(1.02) translateY(-5px);
 }
 
 /* FOOTER */
 footer{
     background: #050b16;
-    padding: 40px 20px;
+    padding: 40px;
     text-align: center;
 }
 
-footer p{
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-/* =========================
-   🔥 CONTADOR DASHBOARD PRO
-========================= */
-
+/* ================= CONTADOR (DASHBOARD) ================= */
 .dashboard-counter{
     display: flex;
     align-items: center;
@@ -241,51 +206,25 @@ footer p{
     border-radius: 22px;
 
     background: linear-gradient(145deg, #0b1224, #111c3a);
-
     border: 1px solid rgba(255,255,255,0.08);
-
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 
     width: fit-content;
     margin: auto;
-
-    transition: 0.3s ease;
-}
-
-.dashboard-counter:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 0 40px rgba(0,229,255,0.15);
-}
-
-.dashboard-counter .icon{
-    font-size: 45px;
-}
-
-.dashboard-counter h3{
-    font-size: 13px;
-    color: #9aa4b2;
-    letter-spacing: 2px;
-    margin-bottom: 6px;
 }
 
 #contador{
     font-size: 52px;
     font-weight: 900;
     color: #00e5ff;
-    text-shadow: 0 0 12px rgba(0,229,255,0.5);
 }
 
-/* RESPONSIVO GERAL */
+/* ================= RESPONSIVO ================= */
+
+/* TABLET */
 @media(max-width: 900px){
 
     .navbar{
         padding: 20px;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    body{
-        padding-top: 160px;
     }
 
     .hero-content h1{
@@ -303,49 +242,42 @@ footer p{
     .split img{
         width: 100%;
     }
-
-    .section{
-        padding: 80px 7%;
-    }
-
-    .section h2{
-        font-size: 34px;
-    }
-
-    .section p{
-        font-size: 18px;
-    }
-
-    .dashboard-counter{
-        flex-direction: column;
-        text-align: center;
-        padding: 22px 28px;
-    }
-
-    #contador{
-        font-size: 40px;
-    }
 }
 
-/* MENU MOBILE EXTRA */
-@media (max-width: 768px){
+/* MOBILE */
+@media(max-width: 768px){
 
-    .navbar h2{
-        font-size: 34px;
-        margin-bottom: 15px;
-        text-align: center;
+    body{
+        padding-top: 90px;
+    }
+
+    .menu-toggle{
+        display: block;
     }
 
     .navbar nav{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        background: rgba(5,10,30,0.95);
+    }
+
+    .navbar nav.active{
+        display: flex;
     }
 
     .navbar nav a{
-        font-size: 16px;
-        padding: 10px 14px;
-        background: rgba(255,255,255,0.06);
-        border-radius: 10px;
+        text-align: center;
+        padding: 15px;
+        display: block;
+    }
+
+    .hero{
+        padding-top: 100px;
     }
 }
